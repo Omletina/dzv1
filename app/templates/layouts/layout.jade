@@ -11,16 +11,17 @@ html(lang="ru-RU")
 				include ../common/header.jade
 				.breadcrumbs.cl
 					// Хлебные крошки
-					include ../common/path.jade 
+					include ../common/path.jade
 					// Фильтр
-					include ../common/filter.jade 
+					include ../common/filter.jade
 				.conteiner.cl
 					// Левые блоки
-					.sidebar 
-						include ../common/sidebar.jade 
+					.sidebar
+						include ../common/sidebar.jade
 
 					// Изменяемый контент
 					.variable-content
 						// Изменяемая часть каждой страницы
 						block content
-		include ../common/footer.jade 
+
+		include ../common/footer.jade

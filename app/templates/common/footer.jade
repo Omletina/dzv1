@@ -9,9 +9,11 @@ mixin menuBottom(navTitle,items)
 			each item in items
 				li.footer__navigation-item: a.footer__navigation-link(href="javascript://") #{item}
 
-	
+
 footer.page-footer
 	.conteiner-footer
+		#back-top(style="display:none;")
+				a#top Наверх
 		.footer-logo
 			img.footer-logo-img(src="img/logo-footer.png", alt="logo-footer")
 		.footer__navigation-list-bl

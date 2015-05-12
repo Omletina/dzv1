@@ -1,0 +1,12 @@
+//- Добавляем примесь для активации пункта навигации текущей страницы
+mixin path(items)
+	ul.path.cl.easing
+		each item, i in items
+			li.path-item
+				if i === pageId
+					span.path-item__text= item.name
+				else
+					a.path-item__link(href=item.href)= item.name 
+					span.separator  >
+
+block pathPage

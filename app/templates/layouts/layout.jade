@@ -1,0 +1,26 @@
+doctype html
+html(lang="ru-RU")
+	include ../common/head.jade
+	body
+		<!--[if lt IE 7]>
+		<p class="browsehappy">Ваш браузер <strong>устарел</strong>. Пожалуйста <a href="http://browsehappy.com/">обновите</a> его.</p>
+		<![endif]-->
+		.wrapper
+			.main-content
+				// Шапка
+				include ../common/header.jade
+				.breadcrumbs.cl
+					// Хлебные крошки
+					include ../common/path.jade 
+					// Фильтр
+					include ../common/filter.jade 
+				.conteiner.cl
+					// Левые блоки
+					.sidebar 
+						include ../common/sidebar.jade 
+
+					// Изменяемый контент
+					.variable-content
+						// Изменяемая часть каждой страницы
+						block content
+		include ../common/footer.jade 

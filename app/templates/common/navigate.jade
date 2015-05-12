@@ -1,0 +1,9 @@
+- var menuMain = ['Мобильные телефоны', 'Планшеты', 'Мр3 плееры', 'Персональные компьютеры', 'Ноутбуки', 'Apple TV', 'Аксессуары']
+nav.navigation
+	ul.navigation-list
+		each item, index in menuMain
+			li.navigation-item
+				a(href="javascript://" class='navigation-link ' + ((index === 1) ? 'active' : ''))
+					span.navigation-link__text #{item}
+
+

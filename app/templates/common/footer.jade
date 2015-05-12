@@ -1,0 +1,59 @@
+- var menuBottom1 = ['О нас', 'Наши цены', 'Наши скидки', 'Акции']
+- var menuBottom2 = ['Смартфоны', 'Планшеты', 'Компьютеры', 'Аксессуары']
+- var menuBottom3 = ['Телефоны', 'Адреса', 'Карта проезда', 'Обратная связь']
+
+mixin menuBottom(navTitle,items)
+	.footer__navigation-item-bl
+		.footer__navigation-title #{navTitle}
+		ul.footer__navigation-list
+			each item in items
+				li.footer__navigation-item: a.footer__navigation-link(href="javascript://") #{item}
+
+	
+footer.page-footer
+	.conteiner-footer
+		.footer-logo
+			img.footer-logo-img(src="img/logo-footer.png", alt="logo-footer")
+		.footer__navigation-list-bl
+			+menuBottom('О магазине', menuBottom1)
+			+menuBottom('Каталог', menuBottom2)
+			+menuBottom('Контакты', menuBottom3)
+		.socials-bl
+			.socials-btn
+				ul.social-btn-list
+					li.social-btn-item
+						a.social-btn-link(href="javascript://")
+							img.social-btn-img(src="/img/appstore-btn.png" alt="appstore")
+							span.social-btn-text appstore
+					li.social-btn-item
+						a.social-btn-link(href="javascript://")
+							img.social-btn-img(src="/img/googleplay-btn.png" alt="googleplay")
+							span.social-btn-text googleplay
+			.socials-btn
+				ul.social-icon-list
+					li.social-icon-item
+						a.social-icon-link(href="javascript://")
+							img.social-icon-img(src="/img/vk-icon.png" alt="vk")
+							span.social-icon-text vk
+					li.social-icon-item
+						a.social-icon-link(href="javascript://")
+							img.social-icon-img(src="/img/fb-icon.png" alt="fb")
+							span.social-icon-text fb
+					li.social-icon-item
+						a.social-icon-link(href="javascript://")
+							img.social-icon-img(src="/img/tw-icon.png" alt="tw")
+							span.social-icon-text tw
+
+
+
+
+// JS
+<!-- build:js js/vendor.js -->
+// bower:js
+script(src='/bower/jquery/dist/jquery.js')
+// endbower
+<!-- endbuild -->
+
+<!-- build:js js/index.js -->
+script(src="js/index.js")
+<!-- endbuild -->

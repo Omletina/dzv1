@@ -55,14 +55,14 @@ textarea { resize:none; }
 			.navigation-link:before { width:29px; left:-29px; background-image:url(../img/navigation-left-grey.png);}
 			.navigation-link:after { width:16px; right:-16px; background-image:url(../img/navigation-right-grey.png);}
 				.navigation-link__text { display:block; line-height:42px; padding:0 29px 0 0; background:url(../img/navigation-bg.gif) repeat-x 0 0 #f7f7f7;}
+         .navigation-link:hover { color:#5c7b98;}
+         .navigation-link:hover:before { background-image:url(../img/navigation-left-hover.png);}
+         .navigation-link:hover:after { background-image:url(../img/navigation-right-hover.png);}
+            .navigation-link:hover .navigation-link__text { background-image:url(../img/navigation-bg-hover.gif);}
 			.navigation-link.active { color:#fff;}
 			.navigation-link.active:before { background-image:url(../img/navigation-left-blue.png);}
 			.navigation-link.active:after { background-image:url(../img/navigation-right-blue.png);}
 				.navigation-link.active .navigation-link__text { background-image:url(../img/navigation-bg-blue.gif);}
-			.navigation-link:hover { color:#5c7b98;}
-			.navigation-link:hover:before { background-image:url(../img/navigation-left-hover.png);}
-			.navigation-link:hover:after { background-image:url(../img/navigation-right-hover.png);}
-				.navigation-link:hover .navigation-link__text { background-image:url(../img/navigation-bg-hover.gif);}
 
 
 /*-----------------------------------------*/

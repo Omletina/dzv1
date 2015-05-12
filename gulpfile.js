@@ -104,6 +104,15 @@ gulp.task('images', function(){
 		}))
 		.pipe(gulp.dest('dist/img'));
 });
+gulp.task('images-upload', function(){
+	return gulp.src('app/upload/**/*')
+		.pipe(imagemin({
+			progressive: true,
+			interlaced: true
+		}))
+		.pipe(gulp.dest('dist/upload'));
+});
+
 
 // Остальные файлы, такие как favicon.ico и пр.
 gulp.task('extras', function(){
@@ -115,7 +124,7 @@ gulp.task('extras', function(){
 
 
 // Сборка и вывод размера содержимого папки dist
-gulp.task('dist', ['useref', 'images', 'fonts', 'extras'], function(){
+gulp.task('dist', ['useref', 'images', 'images-upload', 'fonts', 'extras'], function(){
 	return gulp.src('dist/**/*').pipe(size({title: 'build'}));
 });
 

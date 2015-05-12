@@ -39,11 +39,14 @@ function setEqualHeight(columns){
 				obj.placeholder.attr("data-index", obj.index);
 				obj.opts.removeClass('active');
 				opt.addClass('active');
+				var optIndex = obj.index;
 
 				if (obj.index == 0) {
 					$('.catalog-list').removeClass('lines').addClass('grid');
+					$('.dropdown-ninja').find('li:eq(0)').addClass('active');
 				}else if (obj.index == 1){
 					$('.catalog-list').removeClass('grid').addClass('lines');
+					$('.dropdown-ninja').find('li:eq(1)').addClass('active');
 				}
 
 			});
